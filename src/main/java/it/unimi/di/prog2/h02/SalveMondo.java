@@ -20,11 +20,12 @@ along with this file.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 package it.unimi.di.prog2.h02;
+/*la classe che sto definendo appartiene al package h02 */
 
 /** La prima classe Java. */
 public class SalveMondo {
 
-  /** . */
+  /** non c'è il void perchè è uun costruttore */
   private SalveMondo() {}
 
   /**
