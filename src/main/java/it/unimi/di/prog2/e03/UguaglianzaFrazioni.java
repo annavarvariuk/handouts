@@ -20,6 +20,9 @@ along with this file.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 package it.unimi.di.prog2.e03;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 /** Classe per la verifica dell'uguaglianza tra frazioni. */
 public class UguaglianzaFrazioni {
@@ -31,4 +34,25 @@ public class UguaglianzaFrazioni {
    * corrispondenti rispettivamente a numeratore e denominatore di due frazioni ed emetta nel flusso
    * d'uscita "uguali" se le frazioni sono uguali, oppure "diverse".
    */
+  public static void main(String[] args) {
+    Scanner s =new Scanner(System.in);
+//creo un array di interi per contenere i miei 4 input
+    List<Integer> l= new ArrayList<>(); 
+
+    //popolo l'array
+    while (s.hasNextInt()){
+      l.add(s.nextInt());
+    }
+    s.close();
+
+    double fraz1= l.get(0)/l.get(2);
+    double fraz2=l.get(1)/l.get(3);
+
+    if (fraz1==fraz2){
+      System.out.println("uguali");
+    }else{
+      System.out.println("diverse");
+    }
+
+  }
 }

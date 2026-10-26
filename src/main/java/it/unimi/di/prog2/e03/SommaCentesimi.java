@@ -21,6 +21,8 @@ along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
 package it.unimi.di.prog2.e03;
 
+import java.util.Scanner;
+
 /** Classe per la somma di importi in centesimi. */
 public class SommaCentesimi {
 
@@ -32,4 +34,18 @@ public class SommaCentesimi {
    * centesimi (uno per riga, con la parte decimale separata dalla parte intera da un punto) e ne
    * emetta nel flusso d'uscita la somma.
    */
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    double somma= 0.0;
+
+    while(s.hasNextDouble()){
+      somma=somma+s.nextDouble();
+    
+    }  
+     s.close();
+    System.out.println("la somma è: "+somma);
+//viene stampato con il punto ma devo mettere come input numeri con la virgola 
+//es 14,99 7,10
+
+  }
 }

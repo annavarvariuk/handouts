@@ -19,7 +19,7 @@ along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
 */
 
-package it.unimi.di.prog2.h24;
+package it.unimi.di.prog2.h23;
 
 import java.io.IOException;
 import java.util.ArrayList;
