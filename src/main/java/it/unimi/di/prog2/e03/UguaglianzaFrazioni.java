@@ -45,13 +45,13 @@ public class UguaglianzaFrazioni {
     }
     s.close();
 
-    double fraz1= l.get(0)/l.get(2);
-    double fraz2=l.get(1)/l.get(3);
+    double fraz1= (double)l.get(0)/l.get(2);
+    double fraz2=(double)l.get(1)/l.get(3);
 
     if (fraz1==fraz2){
-      System.out.println("uguali");
+      System.out.print("uguali");
     }else{
-      System.out.println("diverse");
+      System.out.print("diverse");
     }
 
   }

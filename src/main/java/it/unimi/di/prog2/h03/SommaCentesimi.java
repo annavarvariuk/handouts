@@ -5,7 +5,8 @@ Copyright 2025 Massimo Santini
 This file is part of "Programmazione 2 @ UniMI" teaching material.
 
 This is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
+it under the terms of the GNU General Public License as
+ published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
@@ -20,6 +21,7 @@ along with this file.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 package it.unimi.di.prog2.h03;
+import java.util.Locale;
 
 import java.util.Scanner;
 
@@ -30,8 +32,10 @@ public class SommaCentesimi {
   private SommaCentesimi() {}
 
   /**
-   * Legge dal flusso di ingresso un elenco di importi in euro e centesimi (uno per riga, con la
-   * parte decimale separata dalla parte intera da un punto) e ne emette nel flusso d'uscita la
+   * Legge dal flusso di ingresso un elenco di importi in euro 
+   * e centesimi (uno per riga, con la
+   * parte decimale separata dalla parte intera da un punto)
+   * e ne emette nel flusso d'uscita la
    * somma.
    *
    * @param args gli argomenti (ignorati) della riga di comando
@@ -39,10 +43,12 @@ public class SommaCentesimi {
   public static void main(String[] args) {
     double total = 0;
     try (Scanner sc = new Scanner(System.in)) {
+      sc.useLocale(Locale.US);
       while (sc.hasNextDouble()) {
         total += sc.nextDouble();
       }
-      System.out.println(total);
+      double arrotondato = Math.round(total * 100.0) / 100.0;
+      System.out.print(arrotondato);
     }
   }
 }
